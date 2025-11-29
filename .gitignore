@@ -1,2 +1,16 @@
 .DS_Store
 .env
+*.pyc
+*.db
+*.db-shm
+*.db-wal
+*.db-journal
+*.db-trace
+*.db-trace.json
+*.db-trace.jsonl
+*.db-trace.jsonl.gz
+*.db-trace.jsonl.gz.part
+*.db-trace.jsonl.gz.part.1
+*.db-trace.jsonl.gz.part.2
+
+*/node_modules

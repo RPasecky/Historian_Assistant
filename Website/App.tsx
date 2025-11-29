@@ -3,17 +3,11 @@ import { TabView, EnrichedEvent } from './types';
 import { MapView } from './components/MapView';
 import { Timeline } from './components/Timeline';
 import { NetworkGraph } from './components/NetworkGraph';
-import { mockEvents, mockEventPeople, mockEventLocations, mockPeople, mockLocations } from './services/mockData';
-
-// Mock Gemini Service call for now, replacing with static data loader for stability
-// import { fetchHistoricalData } from './services/gemini'; 
+import { fetchEnrichedEvents } from './services/api';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<TabView>(TabView.MAP);
   const [query, setQuery] = useState("Harlem Renaissance & Beat Generation");
-  
-  // State for raw data
-  const [rawEvents] = useState(mockEvents);
   
   // State for filtered/display data
   const [enrichedEvents, setEnrichedEvents] = useState<EnrichedEvent[]>([]);
@@ -26,27 +20,28 @@ export default function App() {
   const [yearRange, setYearRange] = useState<[number, number]>([1920, 1960]);
   const [minYear, maxYear] = [1900, 1980];
 
-  // Initialize Data
+  // Initialize Data (fetch from backend)
   useEffect(() => {
-    // Join data tables
-    const joined: EnrichedEvent[] = rawEvents.map(evt => {
-        const associatedPersonIds = mockEventPeople
-            .filter(ep => ep.event_id === evt.id)
-            .map(ep => ep.person_id);
-        
-        const associatedLocationId = mockEventLocations
-            .find(el => el.event_id === evt.id)?.location_id;
-
-        return {
-            ...evt,
-            people: mockPeople.filter(p => associatedPersonIds.includes(p.id)),
-            location: mockLocations.find(l => l.id === associatedLocationId)
-        };
-    });
-
-    setEnrichedEvents(joined);
-    if (joined.length > 0) setSelectedEventId(joined[0].id);
-  }, [rawEvents]);
+    let isMounted = true;
+    (async () => {
+      try {
+        setLoading(true);
+        const data = await fetchEnrichedEvents();
+        if (!isMounted) return;
+        setEnrichedEvents(data);
+        if (data.length > 0) setSelectedEventId(data[0].id);
+      } catch (e) {
+        console.error("Failed to load events from API, falling back to empty list.", e);
+        if (!isMounted) return;
+        setEnrichedEvents([]);
+      } finally {
+        if (isMounted) setLoading(false);
+      }
+    })();
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   // Filter Data when Range Changes
   useEffect(() => {
