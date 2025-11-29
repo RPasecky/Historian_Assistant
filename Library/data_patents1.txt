@@ -1,3 +1,88 @@
+*** NIKOLA TESLA DOCUMENT TRANSCRIPT ***
+
+--- SECTION 1: PROFESSIONAL ANNOUNCEMENT ---
+Date: New York, January 1, 1904 
+Location: Laboratory, Long Island, N. Y. / Residence, Waldorf, New York City 
+
+I wish to announce that in connection with the commercial introduction of my inventions I shall render professional services in the general capacity of consulting electrician and engineer. The near future, I expect with confidence, will be a witness of revolutionary departures in the production, transformation and transmission of energy, transportation, lighting, manufacture of chemical compounds, telegraphy, telephony and other arts and industries. 
+
+In my opinion, these advances are certain to follow from the universal adoption of high-potential and high-frequency currents and novel regenerative processes of refrigeration to very low temperatures. Much of the old apparatus will have to be improved, and much of the new developed, and I believe that while furthering my own inventions, I shall be more helpful in this evolution by placing at the disposal of others the knowledge and experience I have gained. 
+
+Special attention will be given by me to the solution of problems requiring both expert information and inventive resource-work coming within the sphere of my constant training and predilection. I shall undertake the experimental investigation and perfection of ideas, methods and appliances, the devising of useful expedients and, in particular, the design and construction of machinery for the attainment of desired results. Any task submitted to and accepted by me, will be carried out thoroughly and conscientiously. 
+
+Signed: Nikola Tesla 
+
+--- SECTION 2: EXCERPTS ON WIRELESS TRANSMISSION ---
+(From "Light and Other High-frequency Phenomena," Lecture delivered before the Franklin Institute, Philadelphia, February, 1893, and before the National Electric Light Association, St. Louis, March, 1893) 
+
+"In connection with resonance effects and the transmission of energy over a single conductor, I would say a few words on a subject which constantly fills my thoughts, and which concerns the welfare of all. I mean the transmission of intelligible signals or, perhaps, even power, to any distance without the use of wires. I am becoming daily more convinced of the practicability of the scheme; and though I know full well that the great majority of scientific men will not believe that such results can be practically and immediately realized, yet I think that all consider the developments in recent years by a number of workers to have been such as to encourage thought and experiment in this direction. My conviction has grown so strong that I no longer look upon this plan of energy or intelligence transmission as a mere theoretical possibility, but as a serious problem in electrical engineering, which must be carried out some day. 
+
+We now know that electric vibration may be transmitted through a single conductor. Why, then, not try to avail ourselves of the earth for this purpose? Theoretically, it could not require a great amount of energy to produce a disturbance perceptible at great distance, or even all over the surface of the globe. I think that, beyond doubt, it is possible to operate electrical devices in a city, through the ground or pipe system, by resonance from an electrical oscillator located at a central point. But the practical solution of this problem would be of incomparably smaller benefit to man than the realization of the scheme of transmitting intelligence or, perhaps power, to any distance through the earth or environing medium. Proper apparatus must first be produced, by means of which the problem can be attacked, and I have devoted much thought to this subject. I am firmly convinced that it can be done, and hope that we shall live to see it done." 
+
+(From "The Problem of Increasing Human Energy," Century, June, 1900) 
+
+"Electrical effects of any desired character and of intensities undreamed of before are now easily producible by perfected apparatus of this kind. I have produced electrical discharges, the actual path of which, from end to end, was probably more than one hundred feet long; but it would not be difficult to reach lengths one hundred times as great. I have produced electrical movements occurring at the rate of approximately one hundred thousand horse-power, but rates of one, five, or ten million horse-power are easily practicable. That communication without wires to any point of the globe is practicable with such apparatus would need no demonstration, but through a discovery I made I obtained absolute certitude. 
+
+Popularly explained, it is exactly this: When we raise the voice and hear an echo in reply, we know that the sound of the voice must have reached a distant wall, or boundary, and must have been reflected from the same. Exactly as the sound, so an electrical wave is reflected, and the same evidence which is afforded by an echo is offered by an electrical phenomenon known as a 'stationary' wave—that is, a wave with fixed nodal and ventral regions. Instead of sending sound vibrations toward a distant wall, I have sent electrical vibrations toward the remote boundaries of the earth, and instead of the wall, the earth has replied. In place of an echo I have obtained a stationary electrical wave." 
+
+By the discovery of these facts and perfection of means it becomes possible to transmit electrical energy for industrial uses on a large scale up to practically any amount and, according to all the experimental evidence I have obtained, to any terrestrial distance. The transmitting as well as receiving apparatus may be movable as, when carried by vessels floating in the air or by ships at sea (U.S. Patents Nos. 645,576 and 649,621). 
+
+--- SECTION 3: CORRESPONDENCE ---
+Recipient: Mr. William B. Rankine, 35 Wall Street, New York City. 
+Date: New York, April 19th, 1904. 
+
+My Dear Rankine:
+
+Kindly note the following: The Nikola Tesla Company has no liabilities, and its assets are my patents all duly assigned. I made a personal agreement with Mr. Morgan assigning to him a part of some of these patents, relating specifically to telegraphy and Lighting. Finding, however, that it would be advantageous to have all interests united I proposed to him to join in all my inventions instead of two only, and he accepted. Colonel Astor's interest was also similarly adjusted, so that at present all are in harmony. 
+
+Last Summer we undertook to form a manufacturing company under the better name "Tesla Electric & Manufacturing Company", with a capital of $5,000,000. Unfavorable conditions developed and we thought it better to wait until my plans on Long Island are completed and reaction sets in. The plant at Wardenclyffe, which could now be finished in three to four months will enable me to readily telegraph and telephone to any part of the world, and it can easily be worked up to an earning capacity of ten thousand dollars a day. This is not an exaggerated estimate, for it will have a working capacity of probably more than one hundred Pacific cables put together. 
+
+You understand, of course, that the receivers will involve expense, but as they are extremely cheap instruments they can be quickly installed in quantities by devoting a part of the earnings to this. No more, therefore, than $100,000 are necessary, although more money might be used to advantage in order to secure quicker and larger returns. 
+
+From enclosed short statement of Kerr, Page & Cooper, relative to some of my patents you will see that they are controlling. These patents have an absolutely assured value of certainly not less than $5,000,000. They would bring that much even in the event of my death. This means that in the worst possible case those interested with me would get about seven times the sums invested. But if I am properly aided, and my inventions skillfully exploited, I feel quite sure of hundred fold returns. The present company is the third corporation formed in this country under my name. The first two were both very successful, one paying about five times and the other, I think, twenty-five times the original investment. 
+
+My enemies have contended that I am a poet and a dreamer but it is nevertheless a fact that more money is going into my inventions than in those of the three greatest electrical inventors of my time put together. Some have told me why I do not get all the capital I need from Mr. Morgan, but you know that this is a foolish argument. Some have expressed a doubt that my machines will perform the work for which they are designed. But as you have seen from the editorial of the leading electrical paper in England, others have used without my permission, the "Tesla Coil", "Tesla Transformer" and Tesla High-potential Methods" in their experiments in which sparks thirty inches long were said to have been used to convey wireless messages across the Atlantic. In 1899 I have produced sparks over one hundred feet long. They are of historical record. I need not say more. 
+
+Sincerely yours,
+A. Tesla 
+
+--- SECTION 4: ARTICLE ---
+Title: THE TRANSMISSION OF ELECTRIC ENERGY WITHOUT WIRES 
+Source: Communicated to the Electrical World and Engineer, March 5, 1904 
+Author: By Nikola Tesla 
+
+It is impossible to resist your courteous request extended on an occasion of such moment in the life of your journal. Your letter has vivified the memory of our beginning friendship, of the first imperfect attempts and undeserved successes, of kindnesses and misunderstandings. It has brought painfully to my mind the greatness of early expectations, the quick flight of time, and alas! the smallness of realizations. 
+
+Towards the close of 1898 a systematic research, carried on for a number of years with the object of perfecting a method of transmission of electrical energy through the natural medium, led me to recognize three important necessities: First, to develop a transmitter of great power; second, to perfect means for individualizing and isolating the energy transmitted; and, third, to ascertain the laws of propagation of currents through the earth and the atmosphere. 
+
+Various reasons, not the least of which was the help proffered by my friend Leonard E. Curtis and the Colorado Springs Electric Company, determined me to select for my experimental investigations the large plateau, two thousand meters above sea level, in the vicinity of that delightful resort, which I reached late in May, 1899. I had not been there but a few days when I congratulated myself on the happy choice and I began the task, for which I had long trained myself, with a grateful sense and full of inspiring hope. 
+
+In the middle of June, while preparations for other work were going on, I arranged one of my receiving transformers with the view of determining in a novel manner, experimentally, the electric potential of the globe and studying its periodic and casual fluctuations. The earth was found to be, literally, alive with electrical vibrations, and soon I was deeply absorbed in this interesting investigation. 
+
+It was on the third of July—the date I shall never forget—when I obtained the first decisive experimental evidence of a truth of overwhelming importance for the advancement of humanity. A dense mass of strongly charged clouds gathered in the west and towards the evening a violent storm broke loose which, after spending much of its fury in the mountains, was driven away with great velocity over the plains. My observations were now greatly facilitated and rendered more accurate by the experiences already gained. The recording apparatus being properly adjusted, its indications became fainter and fainter with the increasing distance of the storm, until they ceased altogether. I was watching in eager expectation. Surely enough, in a little while the indications again began, grew stronger and stronger and, after passing through a maximum, gradually decreased and ceased once more. No doubt whatever remained: I was observing stationary waves. As the source of disturbances moved away the receiving circuit came successively upon their nodes and loops. Impossible as it seemed, this planet, despite its vast extent, behaved like a conductor of limited dimensions. 
+
+The tremendous significance of this fact in the transmission of energy by my system had already become quite clear to me. Not only was it practicable to send telegraphic messages to any distance without wires, as I recognized long ago, but also to impress upon the entire globe the faint modulations of the human voice, far more still, to transmit power, in unlimited amounts, to any terrestrial distance and almost without any loss. 
+
+With these stupendous possibilities in sight... I attacked vigorously the development of my magnifying transmitter... with the object of learning how to construct the best one. This is, essentially, a circuit of very high self-induction and small resistance which in its arrangement, mode of excitation and action, may be said to be the diametrically opposite of a transmitting circuit typical of telegraphy by Hertzian or electromagnetic radiations. The electromagnetic radiations being reduced to an insignificant quantity, and proper conditions of resonance maintained, the circuit acts like an immense pendulum, storing indefinitely the energy of the primary exciting impulses and impressing upon the earth and its conducting atmosphere uniform harmonic oscillations of intensities which, as actual tests have shown, may be pushed so far as to surpass those attained in the natural displays of static electricity. 
+
+Simultaneously with these endeavors, the means of individualization and isolation were gradually improved. The fundamental idea of employing a number of distinctive elements, co-operatively associated, for the purpose of isolating energy transmitted, I trace directly to my perusal of Spencer's clear and suggestive exposition of the human nerve mechanism. 
+
+Progress though of necessity slow was steady and sure... before the end of 1899 I completed the task undertaken and reached the results which I have announced in my article in the Century Magazine of June, 1900. Much has already been done towards making my system commercially available... for which the name of "World Telegraphy" has been suggested. It involves the employment of a number of plants, all of which are capable of transmitting individualized signals to the uttermost confines of the earth. A cheap and simple device, which might be carried in one's pocket may then be set up anywhere on sea or land, and it will record the world's news or such special messages as may be intended for it. Thus the entire earth will be converted into a huge brain, as it were, capable of response in every one of its parts. 
+
+The best design of which I knew has been adopted, and the transmitter will emit a wave complex of a total maximum activity of ten million horse-power, one per cent of which is amply sufficient to "girdle the globe." This enormous rate of energy delivery, approximately twice that of the combined falls of Niagara, is obtainable only by the use of certain artifices, which I shall make known in due course. 
+
+For a large part of the work which I have done so far I am indebted to the noble generosity of Mr. J. Pierpont Morgan. I have also to thank my friend, Stanford White, for much unselfish and valuable assistance. 
+
+In this first power plant... I propose to distribute ten thousand horse-power under a tension of one hundred million volts, which I am now able to produce and handle with safety. One of its chief uses will be the illumination of isolated homes. Another valuable application will be the driving of clocks and other such apparatus. The idea of impressing upon the earth American time is fascinating and very likely to become popular. 
+
+When the great truth accidentally revealed and experimentally confirmed is fully recognized, that this planet, with all its appalling immensity, is to electric currents virtually no more than a small metal ball... humanity will be like an antheap stirred up with a stick. 
+
+--- SECTION 5: IMAGE CAPTIONS ---
+Image 1: The Transmission of Electric Energy Without Wires. Tesla Central Power Plant and Transmitting Tower for "World Telegraphy," Long Island N Y 
+Image 2: Experimental Laboratory, Colorado, Erected Summer of 1899. (Discovery by Mr. Tesla of the Stationary Waves of the Earth was made here.)
+
+
+
 Nikola Tesla in New York City: A Chronological and Geospatial Analysis of Key Events and Locations (1885–1930)
 Executive Summary: The Geography of Genius and Decline (1885–1930)
 The period spanning 1885 to 1930 represents the most critical and complex phase of Nikola Tesla’s career, encompassing his greatest inventive triumph—the sale of the polyphase alternating current (AC) system—and his subsequent decline into financial insolvency. This fifty-year span is meticulously documented by a sequence of addresses in New York City, tracing an arc defined by two distinct professional epochs: the highly productive, volatile era of the Lower Manhattan laboratories (1887–1902) and the financially strained era of the Midtown commercial offices and luxury hotel residences (1906–1930).
