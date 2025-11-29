@@ -1,0 +1,139 @@
+{
+  "summary": {
+    "summary": "An introduction to Theodore Roosevelt's 'Letters to His Children,' edited by Joseph Bucklin Bishop. The introduction highlights Roosevelt's practice of writing to his children for over twenty years, treating them as equals, and actively participating in their games and activities, whether at Sagamore Hill or the White House.",
+    "people": [
+      {
+        "name": "Theodore Roosevelt"
+      },
+      {
+        "name": "Joseph Bucklin Bishop"
+      },
+      {
+        "name": "Dagny"
+      },
+      {
+        "name": "John Bickers"
+      },
+      {
+        "name": "David Widger"
+      }
+    ],
+    "places": [
+      {
+        "name": "United States",
+        "latitude": 39.8283,
+        "longitude": -98.5795
+      },
+      {
+        "name": "Sagamore Hill",
+        "latitude": 40.8726,
+        "longitude": -73.5432
+      },
+      {
+        "name": "White House",
+        "latitude": 38.8977,
+        "longitude": -77.0365
+      },
+      {
+        "name": "Rock Creek Park, Washington",
+        "latitude": 38.94,
+        "longitude": -77.05
+      }
+    ],
+    "timeline": [
+      "1919-XX-XX",
+      "2006-04-22",
+      "1903-XX-XX",
+      "1905-01-XX"
+    ]
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "events": [
+        {
+          "date": "2006-04-22",
+          "people": [
+            {
+              "name": "Dagny"
+            },
+            {
+              "name": "John Bickers"
+            },
+            {
+              "name": "David Widger"
+            }
+          ],
+          "places": []
+        },
+        {
+          "date": "1919-01-01",
+          "people": [
+            {
+              "name": "Theodore Roosevelt"
+            },
+            {
+              "name": "Joseph Bucklin Bishop"
+            }
+          ],
+          "places": []
+        }
+      ]
+    },
+    {
+      "page_number": 2,
+      "events": [
+        {
+          "date": "1903-XX-XX",
+          "people": [
+            {
+              "name": "Theodore Roosevelt"
+            },
+            {
+              "name": "children"
+            }
+          ],
+          "places": [
+            {
+              "name": "Sagamore Hill",
+              "latitude": 40.8726,
+              "longitude": -73.5432
+            }
+          ]
+        },
+        {
+          "date": "1905-01-XX",
+          "people": [
+            {
+              "name": "Theodore Roosevelt"
+            },
+            {
+              "name": "nine boys"
+            }
+          ],
+          "places": [
+            {
+              "name": "Rock Creek Park, Washington",
+              "latitude": 38.94,
+              "longitude": -77.05
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 3,
+      "events": [
+        {
+          "date": "1903-01-01",
+          "people": [
+            {
+              "name": "Theodore Roosevelt"
+            }
+          ],
+          "places": []
+        }
+      ]
+    }
+  ]
+}
