@@ -1,0 +1,357 @@
+{
+  "summary": {
+    "summary": "Nikola Tesla announces his professional services as a consulting electrician and engineer, focusing on high-potential and high-frequency currents. He details his extensive research and experiments in wireless transmission of signals and power, including his discovery of stationary waves in Colorado in 1899. He outlines his vision for \"World Telegraphy\" with a central power plant at Wardenclyffe, Long Island, capable of global communication and energy distribution. He also discusses the financial aspects of his ventures, including agreements with J. Pierpont Morgan and Colonel Astor, and the significant value of his patents.",
+    "people": [
+      {
+        "name": "Nikola Tesla"
+      },
+      {
+        "name": "William B. Rankine"
+      },
+      {
+        "name": "Mr. Morgan"
+      },
+      {
+        "name": "Colonel Astor"
+      },
+      {
+        "name": "Leonard E. Curtis"
+      },
+      {
+        "name": "Stanford White"
+      }
+    ],
+    "places": [
+      {
+        "name": "New York City",
+        "latitude": 40.7128,
+        "longitude": -74.006
+      },
+      {
+        "name": "Long Island, N. Y.",
+        "latitude": 40.788,
+        "longitude": -73.137
+      },
+      {
+        "name": "Philadelphia",
+        "latitude": 39.9526,
+        "longitude": -75.1652
+      },
+      {
+        "name": "St. Louis",
+        "latitude": 38.627,
+        "longitude": -90.1994
+      },
+      {
+        "name": "Colorado Springs",
+        "latitude": 38.8375,
+        "longitude": -104.8214
+      }
+    ],
+    "timeline": [
+      "1893-02-XX",
+      "1893-03-XX",
+      "1899-05-XX",
+      "1899-06-XX",
+      "1899-07-03",
+      "1899-XX-XX",
+      "1899-12-31",
+      "1900-06-XX",
+      "1904-01-01",
+      "1904-03-05",
+      "1904-04-19"
+    ]
+  },
+  "pages": [
+    {
+      "page_number": 1,
+      "events": [
+        {
+          "date": "1904-01-01",
+          "people": [
+            {
+              "name": "Nikola Tesla"
+            }
+          ],
+          "places": [
+            {
+              "name": "Long Island, N. Y.",
+              "latitude": 40.788,
+              "longitude": -73.137
+            },
+            {
+              "name": "New York City",
+              "latitude": 40.7128,
+              "longitude": -74.006
+            }
+          ]
+        },
+        {
+          "date": "1893-02-01",
+          "people": [
+            {
+              "name": "Nikola Tesla"
+            }
+          ],
+          "places": [
+            {
+              "name": "Philadelphia",
+              "latitude": 39.9526,
+              "longitude": -75.1652
+            }
+          ]
+        },
+        {
+          "date": "1893-03-01",
+          "people": [
+            {
+              "name": "Nikola Tesla"
+            }
+          ],
+          "places": [
+            {
+              "name": "St. Louis",
+              "latitude": 38.627,
+              "longitude": -90.1994
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 2,
+      "events": [
+        {
+          "date": "1900-06-XX",
+          "people": [
+            {
+              "name": "Nikola Tesla"
+            }
+          ],
+          "places": []
+        }
+      ]
+    },
+    {
+      "page_number": 3,
+      "events": [
+        {
+          "date": "1899",
+          "people": [
+            {
+              "name": "Nikola Tesla"
+            }
+          ],
+          "places": [
+            {
+              "name": "Colorado Springs",
+              "latitude": 38.8375,
+              "longitude": -104.8214
+            }
+          ]
+        },
+        {
+          "date": "1904-04-19",
+          "people": [
+            {
+              "name": "Nikola Tesla"
+            },
+            {
+              "name": "William B. Rankine"
+            }
+          ],
+          "places": [
+            {
+              "name": "New York City",
+              "latitude": 40.7128,
+              "longitude": -74.006
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 4,
+      "events": [
+        {
+          "date": "1903-07-01",
+          "people": [
+            {
+              "name": "Nikola Tesla"
+            }
+          ],
+          "places": []
+        },
+        {
+          "date": "1904-07-01",
+          "people": [
+            {
+              "name": "Nikola Tesla"
+            }
+          ],
+          "places": [
+            {
+              "name": "Wardenclyffe",
+              "latitude": 40.788,
+              "longitude": -73.137
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 5,
+      "events": [
+        {
+          "date": "1899-XX-XX",
+          "people": [
+            {
+              "name": "A. Tesla"
+            }
+          ],
+          "places": []
+        },
+        {
+          "date": "1904-03-05",
+          "people": [
+            {
+              "name": "Nikola Tesla"
+            }
+          ],
+          "places": []
+        },
+        {
+          "date": "1898-XX-XX",
+          "people": [
+            {
+              "name": "Nikola Tesla"
+            }
+          ],
+          "places": []
+        }
+      ]
+    },
+    {
+      "page_number": 6,
+      "events": [
+        {
+          "date": "1899-05-XX",
+          "people": [
+            {
+              "name": "Leonard E. Curtis"
+            },
+            {
+              "name": "Nikola Tesla"
+            }
+          ],
+          "places": [
+            {
+              "name": "Colorado Springs",
+              "latitude": 38.8375,
+              "longitude": -104.8214
+            }
+          ]
+        },
+        {
+          "date": "1899-06-XX",
+          "people": [
+            {
+              "name": "Nikola Tesla"
+            }
+          ],
+          "places": [
+            {
+              "name": "Colorado Springs",
+              "latitude": 38.8375,
+              "longitude": -104.8214
+            }
+          ]
+        },
+        {
+          "date": "1899-07-03",
+          "people": [
+            {
+              "name": "Nikola Tesla"
+            }
+          ],
+          "places": [
+            {
+              "name": "Colorado Springs",
+              "latitude": 38.8375,
+              "longitude": -104.8214
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 7,
+      "events": [
+        {
+          "date": "1899-XX-XX",
+          "people": [
+            {
+              "name": "Nikola Tesla"
+            }
+          ],
+          "places": [
+            {
+              "name": "Colorado Springs",
+              "latitude": 38.8375,
+              "longitude": -104.8214
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_number": 8,
+      "events": [
+        {
+          "date": "1899-12-31",
+          "people": [
+            {
+              "name": "Nikola Tesla"
+            },
+            {
+              "name": "J. Pierpont Morgan"
+            },
+            {
+              "name": "Stanford White"
+            }
+          ],
+          "places": []
+        },
+        {
+          "date": "1900-06-XX",
+          "people": [
+            {
+              "name": "Nikola Tesla"
+            }
+          ],
+          "places": []
+        }
+      ]
+    },
+    {
+      "page_number": 9,
+      "events": [
+        {
+          "date": "1899-XX-XX",
+          "people": [
+            {
+              "name": "Nikola Tesla"
+            }
+          ],
+          "places": [
+            {
+              "name": "Colorado Springs",
+              "latitude": 38.8375,
+              "longitude": -104.8214
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
