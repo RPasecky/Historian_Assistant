@@ -92,7 +92,7 @@ class Event(BaseModel):
     page_range: List[int] = Field(default_factory=list)
     context_chunk_id: Optional[UUID] = None
     event_type: Optional[str] = None
-    event_date: Optional[date] = None
+    event_date: date
     created_at: datetime = Field(default_factory=datetime.utcnow)
 
     @field_validator("page_range")
@@ -173,11 +173,11 @@ class PersonExtraction(BaseModel):
 class LocationExtraction(BaseModel):
     """What LLM returns when extracting locations."""
 
-    name: str
+    name: str = Field(..., description="Name of the location.")
     aliases: List[str] = Field(default_factory=list)
     address: Optional[str] = None
-    latitude: Optional[float] = None
-    longitude: Optional[float] = None
+    latitude: float = Field(..., description="Latitude in decimal degrees.")
+    longitude: float = Field(..., description="Longitude in decimal degrees.")
 
 
 class EventExtraction(BaseModel):
