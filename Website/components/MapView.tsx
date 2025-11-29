@@ -38,9 +38,38 @@ const MapSizer: React.FC = () => {
   const map = useMap();
   useEffect(() => {
     const invalidate = () => map.invalidateSize();
-    invalidate(); // kick once on mount so tiles fill available area
-    window.addEventListener('resize', invalidate);
-    return () => window.removeEventListener('resize', invalidate);
+    const timeoutIds: number[] = [];
+
+    const triggerInitialInvalidations = () => {
+      invalidate();
+      timeoutIds.push(window.setTimeout(invalidate, 150));
+    };
+
+    // Ensure we wait for Leaflet to finish attaching to the DOM
+    if (map._loaded) {
+      triggerInitialInvalidations();
+    } else {
+      map.once('load', triggerInitialInvalidations);
+    }
+
+    const frame = window.requestAnimationFrame(invalidate);
+    const handleResize = () => invalidate();
+    window.addEventListener('resize', handleResize);
+
+    // Observe container size changes (e.g., flexbox or panel toggles)
+    const container = map.getContainer();
+    const observer = typeof ResizeObserver !== 'undefined'
+      ? new ResizeObserver(() => invalidate())
+      : null;
+    observer?.observe(container);
+
+    return () => {
+      timeoutIds.forEach(clearTimeout);
+      window.cancelAnimationFrame(frame);
+      window.removeEventListener('resize', handleResize);
+      observer?.disconnect();
+      map.off('load', triggerInitialInvalidations);
+    };
   }, [map]);
   return null;
 };
