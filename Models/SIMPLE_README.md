@@ -6,7 +6,7 @@
 
 ```bash
 pip install pydantic anthropic python-Levenshtein
-python simple_db.py init
+python artifact_db.py init
 ```
 
 ## Schema
@@ -30,17 +30,17 @@ python simple_db.py init
 ## Usage
 
 ```bash
-# After processing a book
-python simple_db.py dump
+# After processing an artifact
+python artifact_db.py dump
 git add data/historian_dump.sql
-git commit -m "Added: [Book]"
+git commit -m "Added: [Artifact]"
 ```
 
 ## Files
 
-- `simple_models.py` - Pydantic schemas
-- `simple_db.py` - SQLite setup (init/dump/stats)
-- `simple_schema.sql` - PostgreSQL version (for later)
+- `artifact_models.py` - Pydantic schemas
+- `artifact_db.py` - SQLite setup (init/dump/stats)
+- `artifact_schema.sql` - PostgreSQL version (for later)
 
 ## Deduplication
 

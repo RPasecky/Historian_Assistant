@@ -10,23 +10,6 @@ from enum import Enum
 from pydantic import BaseModel, Field, ConfigDict, field_validator
 
 
-class Precision(str, Enum):
-    EXACT = "exact"
-    MONTH = "month"
-    YEAR = "year"
-    CIRCA = "circa"
-    UNKNOWN = "unknown"
-
-
-class MilestoneType(str, Enum):
-    BIRTH = "birth"
-    DEATH = "death"
-    MARRIAGE = "marriage"
-    IMMIGRATION = "immigration"
-    CAREER_CHANGE = "career_change"
-    OTHER = "other"
-
-
 class MatchStatus(str, Enum):
     PENDING = "pending"
     MERGED = "merged"
@@ -41,72 +24,58 @@ def _ensure_page_range(value: List[int]) -> List[int]:
     return value
 
 
-class ORMModel(BaseModel):
-    """Shared Pydantic config for ORM-style models."""
-    model_config = ConfigDict(from_attributes=True)
-
-
-class TimestampedORMModel(ORMModel):
-    created_at: datetime = Field(default_factory=datetime.utcnow)
-
-
-class IdentifiedModel(TimestampedORMModel):
-    id: UUID = Field(default_factory=uuid4)
-
-
 # ============================================================================
 # CORE ENTITIES
 # ============================================================================
 
-class Book(IdentifiedModel):
+class Artifact(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+
+    id: UUID = Field(default_factory=uuid4)
     title: str
     author: str
     publication_year: Optional[int] = None
     time_period_start: Optional[int] = None
     time_period_end: Optional[int] = None
+    created_at: datetime = Field(default_factory=datetime.utcnow)
 
 
-class Person(IdentifiedModel):
+class Person(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+
+    id: UUID = Field(default_factory=uuid4)
     name: str
+    artifact_id: UUID
     aliases: List[str] = Field(default_factory=list)
-    book_id: UUID
-
-    # For deduplication
     birth_year: Optional[int] = None
     death_year: Optional[int] = None
-
-    canonical_id: Optional[UUID] = None
-    external_ids: Dict[str, str] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=datetime.utcnow)
 
 
-class Location(IdentifiedModel):
+class Location(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+
+    id: UUID = Field(default_factory=uuid4)
     name: str
+    artifact_id: UUID
     aliases: List[str] = Field(default_factory=list)
-    book_id: UUID
-
-    # For deduplication (all optional)
-    normalized_address: Optional[str] = None
-    street_name: Optional[str] = None
-    cross_streets: List[str] = Field(default_factory=list)
-    neighborhood: Optional[str] = None
-    borough: Optional[str] = None
-
-    year_start: Optional[int] = None
-    year_end: Optional[int] = None
-
-    geometry: Optional[str] = None  # WKT or GeoJSON
-
-    canonical_id: Optional[UUID] = None
-    external_ids: Dict[str, str] = Field(default_factory=dict)
+    address: Optional[str] = None
+    latitude: Optional[float] = None
+    longitude: Optional[float] = None
+    created_at: datetime = Field(default_factory=datetime.utcnow)
 
 
-class ContextChunk(IdentifiedModel):
-    book_id: UUID
-    chunk_label: Optional[str] = None  # e.g., chapter title or page span label
-    page_range: List[int] = Field(default_factory=list)  # [start, end]
+class ContextChunk(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+
+    id: UUID = Field(default_factory=uuid4)
+    artifact_id: UUID
+    chunk_label: Optional[str] = None
+    page_range: List[int] = Field(default_factory=list)
     summary: Optional[str] = None
     key_persons: List[str] = Field(default_factory=list)
     key_locations: List[str] = Field(default_factory=list)
+    created_at: datetime = Field(default_factory=datetime.utcnow)
 
     @field_validator("page_range")
     @classmethod
@@ -114,15 +83,17 @@ class ContextChunk(IdentifiedModel):
         return _ensure_page_range(value)
 
 
-class Event(IdentifiedModel):
+class Event(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+
+    id: UUID = Field(default_factory=uuid4)
     description: str
-    book_id: UUID
-    page_range: List[int] = Field(default_factory=list)  # [start, end]
+    artifact_id: UUID
+    page_range: List[int] = Field(default_factory=list)
     context_chunk_id: Optional[UUID] = None
     event_type: Optional[str] = None
-
     event_date: Optional[date] = None
-    date_precision: Optional[Precision] = None
+    created_at: datetime = Field(default_factory=datetime.utcnow)
 
     @field_validator("page_range")
     @classmethod
@@ -130,32 +101,40 @@ class Event(IdentifiedModel):
         return _ensure_page_range(value)
 
 
-class Milestone(IdentifiedModel):
-    person_id: UUID
-    book_id: UUID
+class Milestone(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
 
-    milestone_type: MilestoneType
+    id: UUID = Field(default_factory=uuid4)
+    person_id: UUID
+    artifact_id: UUID
+    milestone_type: str
     milestone_date: Optional[date] = None
-    date_precision: Optional[Precision] = None
     description: Optional[str] = None
+    created_at: datetime = Field(default_factory=datetime.utcnow)
 
 
 # ============================================================================
 # RELATIONSHIPS
 # ============================================================================
 
-class EventParticipant(ORMModel):
+class EventParticipant(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+
     event_id: UUID
     person_id: UUID
     role: Optional[str] = None
 
 
-class EventVenue(ORMModel):
+class EventVenue(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+
     event_id: UUID
     location_id: UUID
 
 
-class MilestonePlace(ORMModel):
+class MilestonePlace(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+
     milestone_id: UUID
     location_id: UUID
 
@@ -164,24 +143,27 @@ class MilestonePlace(ORMModel):
 # DEDUPLICATION
 # ============================================================================
 
-class EntityMatch(IdentifiedModel):
+class EntityMatch(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+
+    id: UUID = Field(default_factory=uuid4)
     entity_type: str  # "person" or "location"
     entity_id_1: UUID
     entity_id_2: UUID
-
     similarity_score: Decimal = Field(ge=0, le=1)
     matching_signals: Dict[str, Any] = Field(default_factory=dict)
-
     status: MatchStatus = MatchStatus.PENDING
     reviewed_at: Optional[datetime] = None
+    created_at: datetime = Field(default_factory=datetime.utcnow)
 
 
 # ============================================================================
-# EXTRACTION OUTPUTS (for LLM responses)
+# EXTRACTION OUTPUTS
 # ============================================================================
 
 class PersonExtraction(BaseModel):
-    """What LLM returns when extracting persons"""
+    """What LLM returns when extracting persons."""
+
     name: str
     aliases: List[str] = Field(default_factory=list)
     birth_year: Optional[int] = None
@@ -189,33 +171,25 @@ class PersonExtraction(BaseModel):
 
 
 class LocationExtraction(BaseModel):
-    """What LLM returns when extracting locations"""
+    """What LLM returns when extracting locations."""
+
     name: str
     aliases: List[str] = Field(default_factory=list)
-
-    normalized_address: Optional[str] = None
-    street_name: Optional[str] = None
-    cross_streets: List[str] = Field(default_factory=list)
-    neighborhood: Optional[str] = None
-    borough: Optional[str] = None
-
-    year_start: Optional[int] = None
-    year_end: Optional[int] = None
+    address: Optional[str] = None
+    latitude: Optional[float] = None
+    longitude: Optional[float] = None
 
 
 class EventExtraction(BaseModel):
-    """What LLM returns when extracting events"""
+    """What LLM returns when extracting events."""
+
     description: str
     page_range: List[int] = Field(default_factory=list)
     event_type: Optional[str] = None
     context_label: Optional[str] = None
-
-    event_date: Optional[str] = None  # Will parse to date
-    date_precision: Optional[Precision] = None
+    event_date: Optional[str] = None
     quotes: List[str] = Field(default_factory=list)
     interactions: List[str] = Field(default_factory=list)
-
-    # References (by name, will resolve to IDs)
     person_names: List[str] = Field(default_factory=list)
     location_names: List[str] = Field(default_factory=list)
 
@@ -226,17 +200,18 @@ class EventExtraction(BaseModel):
 
 
 class MilestoneExtraction(BaseModel):
-    """What LLM returns when extracting milestones"""
-    person_name: str  # Will resolve to person_id
-    milestone_type: MilestoneType
+    """What LLM returns when extracting milestones."""
+
+    person_name: str
+    milestone_type: str
     milestone_date: Optional[str] = None
-    date_precision: Optional[Precision] = None
     description: Optional[str] = None
     location_name: Optional[str] = None
 
 
 class ContextChunkExtraction(BaseModel):
-    """High-level snapshot for a source chunk"""
+    """High-level snapshot for a source chunk."""
+
     chunk_label: Optional[str] = None
     page_range: List[int] = Field(default_factory=list)
     summary: Optional[str] = None
@@ -250,8 +225,9 @@ class ContextChunkExtraction(BaseModel):
 
 
 class DocumentExtraction(BaseModel):
-    """Complete extraction from one source document"""
-    book: Book
+    """Complete extraction from one source document."""
+
+    artifact: Artifact
     persons: List[PersonExtraction] = Field(default_factory=list)
     locations: List[LocationExtraction] = Field(default_factory=list)
     context_chunks: List[ContextChunkExtraction] = Field(default_factory=list)
