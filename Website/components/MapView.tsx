@@ -34,6 +34,17 @@ const MapController: React.FC<{ center: [number, number] }> = ({ center }) => {
   return null;
 };
 
+const MapSizer: React.FC = () => {
+  const map = useMap();
+  useEffect(() => {
+    const invalidate = () => map.invalidateSize();
+    invalidate(); // kick once on mount so tiles fill available area
+    window.addEventListener('resize', invalidate);
+    return () => window.removeEventListener('resize', invalidate);
+  }, [map]);
+  return null;
+};
+
 export const MapView: React.FC<MapViewProps> = ({ events, selectedEventId, onSelectEvent }) => {
   const selectedEvent = events.find(e => e.id === selectedEventId);
   const center: [number, number] = (selectedEvent && selectedEvent.location?.latitude && selectedEvent.location?.longitude)
@@ -52,6 +63,7 @@ export const MapView: React.FC<MapViewProps> = ({ events, selectedEventId, onSel
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
           url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
         />
+        <MapSizer />
         <MapController center={center} />
         
         {events.map((event) => {

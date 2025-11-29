@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import { TabView, EnrichedEvent } from './types';
 import { MapView } from './components/MapView';
 import { Timeline } from './components/Timeline';
@@ -17,8 +17,9 @@ export default function App() {
   const [selectedEventId, setSelectedEventId] = useState<string | null>(null);
   
   // Time Filter State
-  const [yearRange, setYearRange] = useState<[number, number]>([1920, 1960]);
-  const [minYear, maxYear] = [1900, 1980];
+  const [yearRange, setYearRange] = useState<[number, number]>([1900, 1950]);
+  const [minYear, setMinYear] = useState(1900);
+  const [maxYear, setMaxYear] = useState(1950);
 
   // Initialize Data (fetch from backend)
   useEffect(() => {
@@ -30,6 +31,17 @@ export default function App() {
         if (!isMounted) return;
         setEnrichedEvents(data);
         if (data.length > 0) setSelectedEventId(data[0].id);
+
+        const validYears = data
+          .map(event => event.year)
+          .filter((year): year is number => typeof year === 'number' && !Number.isNaN(year) && year > 0);
+        const fallbackMin = 1850;
+        const fallbackMax = fallbackMin + 50;
+        const derivedMinYear = validYears.length ? Math.min(...validYears) : fallbackMin;
+        const derivedMaxYear = validYears.length ? Math.max(...validYears) : fallbackMax;
+        setMinYear(derivedMinYear);
+        setMaxYear(Math.max(derivedMaxYear, derivedMinYear + 1));
+        setYearRange([derivedMinYear, Math.max(derivedMaxYear, derivedMinYear + 1)]);
       } catch (e) {
         console.error("Failed to load events from API, falling back to empty list.", e);
         if (!isMounted) return;
@@ -45,9 +57,10 @@ export default function App() {
 
   // Filter Data when Range Changes
   useEffect(() => {
-    const filtered = enrichedEvents.filter(e => 
-        e.year >= yearRange[0] && e.year <= yearRange[1]
-    );
+    const filtered = enrichedEvents.filter(e => {
+        if (!e.year || e.year <= 0) return true;
+        return e.year >= yearRange[0] && e.year <= yearRange[1];
+    });
     setDisplayEvents(filtered);
   }, [yearRange, enrichedEvents]);
 
@@ -56,6 +69,10 @@ export default function App() {
   };
 
   const selectedEvent = displayEvents.find(e => e.id === selectedEventId);
+  const sliderSpan = Math.max(1, maxYear - minYear);
+  const clampPercent = (value: number) => Math.min(100, Math.max(0, value));
+  const startPercent = clampPercent(((yearRange[0] - minYear) / sliderSpan) * 100);
+  const endPercent = clampPercent(((yearRange[1] - minYear) / sliderSpan) * 100);
 
   return (
     <div className="flex flex-col h-screen overflow-hidden bg-stone-100 font-sans text-stone-900">
@@ -91,7 +108,7 @@ export default function App() {
                         onChange={(e) => setYearRange([Math.min(parseInt(e.target.value), yearRange[1] - 1), yearRange[1]])}
                         className="absolute w-full h-full opacity-0 cursor-pointer z-20"
                      />
-                     <input 
+                    <input 
                         type="range" 
                         min={minYear} 
                         max={maxYear} 
@@ -102,13 +119,19 @@ export default function App() {
                      <div 
                         className="absolute h-full bg-amber-500 rounded-full opacity-50"
                         style={{
-                            left: `${((yearRange[0] - minYear) / (maxYear - minYear)) * 100}%`,
-                            right: `${100 - ((yearRange[1] - minYear) / (maxYear - minYear)) * 100}%`
+                            left: `${startPercent}%`,
+                            right: `${100 - endPercent}%`
                         }}
                      ></div>
                      {/* Thumbs visual */}
-                     <div className="absolute top-1/2 -mt-2 w-4 h-4 bg-white border-2 border-amber-600 rounded-full shadow pointer-events-none transform -translate-x-1/2 transition-all" style={{ left: `${((yearRange[0] - minYear) / (maxYear - minYear)) * 100}%` }}></div>
-                     <div className="absolute top-1/2 -mt-2 w-4 h-4 bg-white border-2 border-amber-600 rounded-full shadow pointer-events-none transform -translate-x-1/2 transition-all" style={{ left: `${((yearRange[1] - minYear) / (maxYear - minYear)) * 100}%` }}></div>
+                     <div
+                        className="absolute top-1/2 -mt-2 w-4 h-4 bg-white border-2 border-amber-600 rounded-full shadow pointer-events-none transform -translate-x-1/2 transition-all"
+                        style={{ left: `${startPercent}%` }}
+                     ></div>
+                     <div
+                        className="absolute top-1/2 -mt-2 w-4 h-4 bg-white border-2 border-amber-600 rounded-full shadow pointer-events-none transform -translate-x-1/2 transition-all"
+                        style={{ left: `${endPercent}%` }}
+                     ></div>
                 </div>
              </div>
           </div>
